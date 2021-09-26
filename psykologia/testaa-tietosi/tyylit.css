@@ -1,0 +1,46 @@
+html {
+  height: 100vh;
+}
+
+body {
+  text-align: center;
+}
+
+button {
+  width: 30rem;
+  margin: auto;
+  border: 3px solid black;
+}
+
+button:focus {
+  outline: none;
+  border: 3px solid darkgreen;
+}
+
+#kysymysnäyttö {
+  font-size: 1.25rem;
+  width: 30rem;
+  margin: auto;
+  text-align: center;
+}
+
+#väärin-tulos,
+#harjoitus-valmis {
+  display: none;
+}
+
+#vastauksen-tulos {
+  display: inline-block;
+  width: 5rem;
+  margin: auto;
+  text-align: center;
+}
+
+a:focus {
+  outline: none;
+}
+
+#siirry-seuraavaan-kysymykseen:focus {
+  outline: none;
+  background-color: black;
+}

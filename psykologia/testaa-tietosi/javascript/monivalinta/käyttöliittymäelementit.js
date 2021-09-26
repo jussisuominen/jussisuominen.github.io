@@ -1,0 +1,8 @@
+const kysymysnäyttö = document.getElementById('kysymysnäyttö')
+const monivalintanäyttö = document.getElementById('monivalintanäyttö')
+const vastauksenTulos = document.getElementById('vastauksen-tulos')
+const oikeinTulos = document.getElementById('oikein-tulos')
+const väärinTulos = document.getElementById('väärin-tulos')
+const harjoitusValmis = document.getElementById('harjoitus-valmis')
+const seuraavaKysymysValinta = document.getElementById('seuraava-kysymys')
+// const toimintapainike = document.getElementById('toimintapainike')

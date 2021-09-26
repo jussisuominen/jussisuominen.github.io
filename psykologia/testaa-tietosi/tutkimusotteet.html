@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testaa tietosi: Psykologian tutkimusotteet</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="tyylit.css">
+</head>
+
+<body>
+  <div class="w3-container">
+    <h1>Testaa psykologian tietosi</h1>
+
+    <h2>Psykologian tutkimusotteet</h2>
+    <!-- Vastauksen tulos -viestilaatikko -->
+    <div id="vastauksen-tulos w3-padding">
+      <div id="oikein-tulos" class="w3-pale-green w3-text-center w3-padding">
+        Vastauksesi on <strong class="w3-text-green">oikein</strong>!
+
+        <a href="javascript:näytäKysymys()" id="seuraava-kysymys" id="siirry-seuraavaan-kysymykseen">Siirry seuraavaan
+          kysymykseen</a>
+        painamalla jotain näppäintä tai napsauttamalla em. linkkiä.
+      </div>
+
+      <div id="väärin-tulos" class="w3-text-center w3-pale-red w3-round w3-padding">
+        Vastauksesi on <strong class="w3-text-red">väärin</strong>!
+      </div>
+
+      <div id="harjoitus-valmis" class="w3-pale-green w3-padding">
+        Hienoa! Sait tehtyä harjoituksen loppuun. <a href="javascript:teeHarjoitusUudestaan()">Tee uudestaan</a>
+      </div>
+    </div>
+
+    <!-- Kysymysnäyttö -->
+    <div id="kysymysnäyttö"></div>
+
+    <!-- Monivalintanäyttö -->
+    <div id="monivalintanäyttö">
+    </div>
+  </div>
+  <script src="./javascript/monivalinta/shuffle_array.js"></script>
+  <!-- Monivalintatehtävän data. -->
+  <script>
+    let kysymykset = [
+      'Psykologian tutkimusote, jolla selvitetään ilmiöiden välistä yhteyttä',
+      'Psykologian tutkimusote, jolla selvitetään syy-seuraussuhdetta',
+      'Psykologian tutkimusote, jossa keskitytään yhteen ihmiseen',
+      'Psykologian tutkimusote, jota käytetään ilmiön luonnehtimiseen',
+    ]
+
+    const oikeatVastaukset = [
+      'Korrelatiivinen tutkimusote',
+      'Kokeellinen tutkimusote',
+      'Tapaustutkimusote',
+      'Kuvaileva tutkimusote'
+    ]
+  </script>
+  <script src="./javascript/monivalinta//tutkimusotteet.js"></script>
+  <script src="./javascript/monivalinta/käyttöliittymäelementit.js"></script>
+  <script src="./javascript/monivalinta/globaalit_muuttujat.js"></script>
+  <script src="./javascript/monivalinta/funktiot.js"></script>
+  <script src="./javascript/monivalinta/monivalinta.js"></script>
+</body>
+
+</html>
