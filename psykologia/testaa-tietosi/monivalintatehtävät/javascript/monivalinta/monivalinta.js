@@ -9,7 +9,7 @@ monivalintanäyttö.addEventListener('click', (e) => {
 
   const valittuVaihtoehto = e.target;
 
-  const annettuVastaus = valittuVaihtoehto.textContent;
+  const annettuVastaus = valittuVaihtoehto.textContent.split('.')[1].trim();
 
   tarkistaVastaus(annettuVastaus, valittuVaihtoehto);
 });

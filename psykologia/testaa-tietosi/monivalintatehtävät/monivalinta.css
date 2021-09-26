@@ -16,6 +16,11 @@ button:focus {
   text-align: center;
 }
 
+#oikein-tulos, #väärin-tulos,
+#harjoitus-valmis {
+  width: 30rem;
+}
+
 #väärin-tulos,
 #harjoitus-valmis {
   display: none;
@@ -23,7 +28,7 @@ button:focus {
 
 #vastauksen-tulos {
   display: inline-block;
-  width: 5rem;
+  max-width: 5rem;
   margin: auto;
   text-align: center;
 }

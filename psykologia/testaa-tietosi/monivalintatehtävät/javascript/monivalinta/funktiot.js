@@ -118,6 +118,8 @@ function näytäKysymys() {
 }
 
 function tarkistaVastaus(annettuVastaus, valittuVaihtoehto) {
+  console.log(annettuVastaus)
+  
   if(annettuVastaus === oikeaVastaus) {
     oikein(valittuVaihtoehto)
   } else {
