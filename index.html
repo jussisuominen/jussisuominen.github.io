@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <title>Kotisivut</title>
-</head>
-<body>
-  <div class="container">
-    <div class="row mt-3">
-      <div class="col-md-6 offset-md-3">
-        <h1 class="text-center">Kotisivut</h1>
-        <hr>
-        <h2>Linkit</h2>
-        <ul>
-          <p><li><a href="https://udemy.com" class="text-dark">Udemy</a></li></p>
-          <p><li><a href="https://youtube.com" class="text-dark">Youtube</a></li></p>
-        </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: url('tausta.jpg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+      }
+
+      .container {
+        opacity: 0.9;
+      }
+
+      .btn {
+        display: block
+      }
+    </style>
+    <title>Kotisivut</title>
+  </head>
+  <body class="bg-secondary">
+    <!-- <h1>Kotisivut</h1>
+  <hr> -->
+    <div class="container mt-5 text-center">
+      <div class="row mt-3">
+        <div class="col-md-4 offset-md-4">
+          <div class="card rounded-top border-dark">
+            <div class="card-header bg-dark text-light"><h1>Kotisivut</h1></div>
+            <div class="card-body rounded-bottom">
+              <h2>Linkit</h2>
+                <p><a href="https://udemy.com" class="btn btn-block btn-dark text-light">Udemy</a></p>
+                <p><a href="https://youtube.com" class="btn btn-block btn-dark text-light">Youtube</a></p>
+                <a href="psykologia/testaa-tietosi/monivalintatehtävät" class="btn btn-block btn-dark text-light">Testaa psykologian tietosi</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
