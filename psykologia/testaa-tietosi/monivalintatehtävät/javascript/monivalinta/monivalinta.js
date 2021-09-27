@@ -4,7 +4,7 @@ async function lataaData() {
 
   const datatiedosto = urlParams.get('datatiedosto')
 
-  const data = await fetch(`http://localhost:5500/psykologia/testaa-tietosi/monivalintatehtävät/data/${datatiedosto}`)
+  const data = await fetch(`https://jussisuominen.github.io/psykologia/testaa-tietosi/monivalintatehtävät/data/${datatiedosto}`)
   const jsonData = await data.json()
 
   return jsonData;
