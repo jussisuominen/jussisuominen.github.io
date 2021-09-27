@@ -5,3 +5,9 @@ html {
 body {
   text-align: center;
 }
+
+button, #tehtävävalikko a {
+  width: 20rem;
+  margin: auto;
+  height: auto;
+}

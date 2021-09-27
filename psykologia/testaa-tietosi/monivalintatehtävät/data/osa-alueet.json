@@ -1,0 +1,29 @@
+{
+  "otsikko": "Psykologian osa-alueet",
+  "kysymykset": [
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii ihmisen kehitystä eri elämänvaiheissa",
+      "oikeaVastaus": "kehityspsykologia"
+    },
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii ihmisen tiedonkäsittelyä",
+      "oikeaVastaus": "kognitiivinen psykologia"
+    },
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii aivojen ja ihmisen toiminnan välistä suhdetta",
+      "oikeaVastaus": "neuropsykologia"
+    },
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii ryhmän jäsenyyttä ja ryhmien toimintaa",
+      "oikeaVastaus": "sosiaalipsykologia"
+    },
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii mielenterveyttä ja mielenterveyden häiriöitä",
+      "oikeaVastaus": "kliininen psykologia"
+    },
+    {
+      "kysymysteksti": "Psykologian osa-alue, joka tutkii yksilöiden välisiä eroja ja yhtäläisyyksiä",
+      "oikeaVastaus": "persoonallisuuspsykologia"
+    }
+  ]
+}

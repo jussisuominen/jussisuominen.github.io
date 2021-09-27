@@ -1,9 +1,3 @@
-button {
-  width: 30rem;
-  margin: auto;
-  border: 3px solid black;
-}
-
 button:focus {
   outline: none;
   border: 3px solid darkgreen;
@@ -14,6 +8,7 @@ button:focus {
   width: 30rem;
   margin: auto;
   text-align: center;
+  margin-top: 2rem;
 }
 
 #oikein-tulos, #väärin-tulos,
@@ -21,16 +16,20 @@ button:focus {
   width: 30rem;
 }
 
+#oikein-tulos {
+  visibility: hidden;
+}
+
 #väärin-tulos,
 #harjoitus-valmis {
   display: none;
+  margin-top: 1rem;
 }
 
 #vastauksen-tulos {
   display: inline-block;
-  max-width: 5rem;
-  margin: auto;
   text-align: center;
+  height: 5rem;
 }
 
 a:focus {

@@ -1,0 +1,21 @@
+{
+  "otsikko": "Psykologian tutkimusotteet",
+  "kysymykset": [
+    {
+      "kysymysteksti": "Psykologian tutkimusote, jolla selvitetään ilmiöiden välistä yhteyttä",
+      "oikeaVastaus": "Korrelatiivinen tutkimusote"
+    },
+    {
+      "kysymysteksti": "Psykologian tutkimusote, jolla selvitetään syy-seuraussuhdetta",
+      "oikeaVastaus": "Kokeellinen tutkimusote"
+    },
+    {
+      "kysymysteksti": "Psykologian tutkimusote, jossa keskitytään yhteen ihmiseen",
+      "oikeaVastaus": "Tapaustutkimusote"
+    },
+    {
+      "kysymysteksti": "Psykologian tutkimusote, jota käytetään ilmiön luonnehtimiseen",
+      "oikeaVastaus": "Kuvaileva tutkimusote"
+    }
+  ]
+}

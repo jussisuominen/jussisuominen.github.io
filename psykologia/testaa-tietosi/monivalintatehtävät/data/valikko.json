@@ -1,0 +1,14 @@
+[
+  {
+    "otsikko": "Tutkimusotteet",
+    "datatiedosto": "tutkimusotteet.json"
+  },
+  {
+    "otsikko": "Psykologian suuntaukset",
+    "datatiedosto": "suuntaukset.json"
+  },
+  {
+    "otsikko": "Psykologian osa-alueet",
+    "datatiedosto": "osa-alueet.json"
+  }  
+]

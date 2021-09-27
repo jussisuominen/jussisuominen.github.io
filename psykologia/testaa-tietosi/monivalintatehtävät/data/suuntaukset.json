@@ -1,0 +1,29 @@
+{
+  "otsikko": "Psykologian tutkimusotteet",
+  "kysymykset": [
+    {
+      "kysymysteksti": "psykologian suuntaus, joka perustuu Freudin luomaan terapiamuotoon ja jossa ihmisen toiminnan perustana ajatellaan olevan tiedostamattomat tarpeet ja motiivit",
+      "oikeaVastaus": "psykodynaaminen suuntaus"
+    },
+    {
+      "kysymysteksti": "psykologian suuntaus, joka tutkii ihmisten ja eläinten ulkoista käyttäytymistä",
+      "oikeaVastaus": "behaviorismi"
+    },
+    {
+      "kysymysteksti": "psykologian suuntaus, jonka mukaan kaikki ihmiset ovat pohjimmiltaan hyviä ja täynnä mahdollisuuksia",
+      "oikeaVastaus": "humanistinen suuntaus"
+    },
+    {
+      "kysymysteksti": "psykologian suuntaus, jossa ihminen nähdään aktiivisena tiedonkäsittelijänä",
+      "oikeaVastaus": "kognitiivinen suuntaus"
+    },
+    {
+      "kysymysteksti": "psykologian osa-alue ja suuntaus, joka tutkii aivojen ja ihmisen toiminnan välistä suhdetta",
+      "oikeaVastaus": "neuropsykologia"
+    },
+    {
+      "kysymysteksti": "psykologian suuntaus, joka selittää psyykkistä toimintaa luonnonvalinnan mekanismien kautta",
+      "oikeaVastaus": "evoluutiopsykologia"
+    }
+  ]
+}

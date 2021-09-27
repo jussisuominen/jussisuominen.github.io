@@ -1,54 +1,23 @@
-monivalintanäyttö.addEventListener('click', (e) => {
-  // Mikäli käyttäjä on painanut jotain muuta kuin vaihtoehtopainiketta,
-  // älä jatka eteenpäin.
-  if (e.target.nodeName != 'BUTTON') return;
+async function lataaData() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
 
-  // Jos käyttäjä on vastannut oikein, muttei ole vielä siirtynyt seuraavaan
-  // kysymykseen (vastausOikein == true), älä jatka eteenpäin.
-  if (vastausOikein) return;
+  const datatiedosto = urlParams.get('datatiedosto')
 
-  const valittuVaihtoehto = e.target;
+  const data = await fetch(`http://localhost:5500/psykologia/testaa-tietosi/monivalintatehtävät/data/${datatiedosto}`)
+  const jsonData = await data.json()
 
-  const annettuVastaus = valittuVaihtoehto.textContent.split('.')[1].trim();
+  return jsonData;
+}
 
-  tarkistaVastaus(annettuVastaus, valittuVaihtoehto);
-});
+lataaData().then(tehtävä => {
+  document.getElementById('otsikkonäyttö').textContent = tehtävä.otsikko
 
-document.addEventListener('keypress', (e) => {
-  // Jos käyttäjä on vastannut oikein, voi hän siirtyä seuraavaan kysymykseen
-  // painamalla jotain näppäintä. Jos siis käyttäjä on vastannut oikein,
-  // näytä kysymys, kun käyttäjä painaa jotain näppäintä.
-  if (vastausOikein) {
-    näytäKysymys();
-  } else {
-    // Käyttäjä on vastaamassa kysymykseen ja hänen tarkoituksenaan on (ilmeisesti)
-    // valita vaihtoehto numeronäppäimen avulla.
+  kysymykset = tehtävä.kysymykset.map(kysymys => kysymys.kysymysteksti)
+  oikeatVastaukset = tehtävä.kysymykset.map(kysymys => kysymys.oikeaVastaus)
 
-    // Hyväksy vain numeronäppäinten painallukset. Jos näppäin on joku
-    // muu kuin numeronäppäintä, palaa.
-    if (isNaN(+e.key)) return;
+  kysymysjärjestys = kysymykset.map((_, indeksi) => indeksi)
+  kysymysjärjestys = shuffle(kysymysjärjestys)
 
-    // Hyväksy vain numeronäppäimet välillä 1 - vaihtoehtojen määrä.
-    // Jos numero näppäin on 0 tai suurempi kuin vaihtoehtojen määrä, palaa.
-    if (+e.key < 1 || +e.key > vaihtoehdot.length) return;
-
-    const annettuVastaus = vaihtoehdot[+e.key - 1];
-    const valittuVaihtoehto = document.getElementById(`valinta${+e.key}`);
-
-    tarkistaVastaus(annettuVastaus, valittuVaihtoehto);
-  }
-});
-
-// document.getElementById('toimintapainike').addEventListener('click', function() {
-//   console.log(this.textContent);
-
-//   switch(this.textContent) {
-//     case "Seuraava kysymys":
-//       näytäKysymys()
-//       break;
-//     case "Yritä uudelleen":
-//      vastauksenTulos.style.display = 'none'
-//   }
-// })
-
-näytäKysymys();
+  näytäKysymys();
+})

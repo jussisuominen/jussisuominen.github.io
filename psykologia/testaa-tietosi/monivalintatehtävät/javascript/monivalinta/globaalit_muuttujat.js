@@ -1,9 +1,7 @@
-let kysymysindeksi = 0, kysymys
-let kysymysjärjestys = kysymykset.map((_, indeksi) => indeksi)
-
-kysymysjärjestys = shuffle(kysymysjärjestys)
+let kysymysindeksi = 0, kysymykset, kysymys, kysymysjärjestys
 
 let vastaukset = []
+let oikeatVastaukset = []
 let vaihtoehdot = []
 let vastaus
 

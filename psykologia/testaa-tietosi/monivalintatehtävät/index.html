@@ -14,10 +14,24 @@
   <div class="w3-container" style="margin-top: 5rem">
     <h1>Testaa psykologian tietosi</h1>
 
-      <p><a href="tutkimusotteet.html" class="w3-btn w3-teal w3-round-xlarge">Psykologian tutkimusotteet</a></p>
-
-      <p><a href="psykologian_suuntaukset.html" class="w3-btn w3-teal w3-round-xlarge">Psykologian suuntaukset</a></p>
+    <div id="tehtävävalikko"></div>
   </div>
+
+  <script>
+    async function lataaData() {    
+      const data = await fetch(`http://localhost:5500/psykologia/testaa-tietosi/monivalintatehtävät/data/valikko.json`)
+      const jsonData = await data.json()
+    
+      return jsonData;
+    }
+
+    lataaData().then(tehtävät => {
+      const tehtävävalikko = document.getElementById('tehtävävalikko')
+
+      tehtävät.forEach(tehtävä => 
+        tehtävävalikko.innerHTML += `<p><a href="monivalinta.html?datatiedosto=${tehtävä.datatiedosto}" class="w3-btn w3-teal w3-round-xlarge">${tehtävä.otsikko}</a></p>`)
+    })
+  </script>
 </body>
 
 </html>
