@@ -12,8 +12,11 @@
     />
     <style>
       body {
-        background: url('tausta.jpg');
+        background: url('tausta.jpg') no-repeat center center fixed;
         background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-backround-size: cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -65,7 +68,7 @@
               >
             </div>
           </div>
-          <span class="fixed-bottom text-light p-1 display-inline"
+          <span class="fixed-bottom text-light p-1 display-inline d-none"
             ><small>Taustakuvan lähde:
             <a
               href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/"

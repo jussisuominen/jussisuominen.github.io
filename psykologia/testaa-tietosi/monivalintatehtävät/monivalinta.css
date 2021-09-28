@@ -3,18 +3,22 @@ button:focus {
   border: 3px solid darkgreen;
 }
 
-#kysymysnäyttö {
+/* #kysymysnäyttö {
   font-size: 1.25rem;
-  width: 30rem;
-  margin: auto;
+  /* width: 20rem; */
+  /* margin: auto;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2rem; */
+/* } */
+
+#kysymysnäyttö {
+  margin-top: 1rem;
 }
 
-#oikein-tulos, #väärin-tulos,
+/* #oikein-tulos, #väärin-tulos,
 #harjoitus-valmis {
   width: 30rem;
-}
+} */
 
 #oikein-tulos {
   visibility: hidden;
@@ -29,7 +33,8 @@ button:focus {
 #vastauksen-tulos {
   display: inline-block;
   text-align: center;
-  height: 5rem;
+  height: 4rem;
+
 }
 
 a:focus {

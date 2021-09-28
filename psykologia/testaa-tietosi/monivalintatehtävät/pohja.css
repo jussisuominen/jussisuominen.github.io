@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100vh;
 }
@@ -6,8 +10,8 @@ body {
   text-align: center;
 }
 
-button, #tehtävävalikko a {
-  width: 20rem;
+/* button, #tehtävävalikko a {
+  width: 15rem;
   margin: auto;
   height: auto;
-}
+} */
