@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-    <style>
-      body {
-        background: url('tausta.jpg') no-repeat center center fixed;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-backround-size: cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 70vh;
-      }
 
-      small {
-        font-size: 0.8rem;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <style>
+    body {
+      background: url('tausta.jpg') no-repeat center center fixed;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-backround-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+    }
 
-      .container {
-        opacity: 0.9;
-      }
+    p {
+      display: inline-block;
+    }
 
-      .btn {
-        display: block;
-      }
-    </style>
-    <title>Kotisivut</title>
-  </head>
-  <body class="bg-secondary">
-    <!-- <h1>Kotisivut</h1>
+    small {
+      font-size: 0.8rem;
+    }
+
+    .container {
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline;
+    }
+  </style>
+  <title>Kotisivut</title>
+</head>
+
+<body class="bg-secondary">
+  <!-- <h1>Kotisivut</h1>
   <hr> -->
-    <div class="container mt-5 text-center">
-      <div class="row mt-3">
-        <div class="col-md-4 offset-md-4">
-          <div class="card rounded-top border-dark">
-            <div class="card-header bg-dark text-light"><h1>Kotisivut</h1></div>
-            <div class="card-body rounded-bottom">
-              <h2>Linkit</h2>
-              <p>
-                <a
-                  href="https://udemy.com"
-                  class="btn btn-block btn-dark text-light"
-                  target="blank">Udemy</a
-                >
-              </p>
-              <p>
-                <a
-                  href="https://youtube.com"
-                  class="btn btn-block btn-dark text-light"
-                  target="blank">Youtube</a
-                >
-              </p>
-              <a
-                href="psykologia/testaa-tietosi/monivalintatehtävät"
-                class="btn btn-block btn-dark text-light"
-                target="blank">Testaa psykologian tietosi</a
-              >
+  <div class="container mt-5 text-center">
+    <div class="row mt-3">
+      <div class="col-md-6 offset-md-3">
+        <div class="card rounded-top border-dark">
+
+          <div class="card-header bg-dark text-light">
+            <h1>Kotisivut</h1>
+          </div>
+
+          <div class="card-body rounded-bottom p-4">
+            <h2>Linkit</h2>
+            <hr>
+            <div class="row">
+
+              <div class="col">
+                <h3>Tietotekniikka</h3>
+                <p>
+                  <a href="https://udemy.com" class="btn btn-block btn-dark text-light" target="blank">Udemy</a>
+                </p>
+                <p>
+                  <a href="https://youtube.com" class="btn btn-block btn-dark text-light" target="blank">Youtube</a>
+                </p>
+              </div>
+
+
+
+              <div class="col">
+                <h3>Psykologia</h3>
+                <a href="psykologia/testaa-tietosi/monivalintatehtävät" class="btn btn-block btn-dark text-light"
+                  target="blank">Testaa psykologian tietosi</a>
+              </div>
             </div>
           </div>
-          <span class="fixed-bottom text-light p-1 display-inline d-none"
-            ><small>Taustakuvan lähde:
-            <a
-              href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/"
-              class="text-light"
-              target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a
-            ></small></span
-          >
+
         </div>
+        <span class="fixed-bottom text-light p-1 d-none d-sm-inline"><small>Taustakuvan lähde:
+            <a href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/" class="text-light"
+              target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a></small></span>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
