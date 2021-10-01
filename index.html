@@ -17,7 +17,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 70vh;
     }
 
     small {
@@ -26,6 +25,33 @@
 
     .container {
       opacity: 0.9;
+      height: 70vh;
+    }
+
+    @media(min-height: 568px) {
+      #taustakuvan-lähde-työpöytä {
+        position: fixed;
+        bottom: 0px;
+      }
+    }
+
+    @media (hover: none) {
+      .card-body a {
+        border: 1px solid black;
+        padding: 5px 20px;
+        border-radius: 15px;
+        text-decoration: none;
+        background-color: rgb(0, 0, 0, 0.9);
+        color: white;
+        width: 15rem;
+        margin-bottom: 0.25rem;
+        display: inline-block;
+      }
+
+      footer {
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+      }
     }
   </style>
   <title>Kotisivut</title>
@@ -51,10 +77,10 @@
               <div class="col-md">
                 <h3>Tietotekniikka</h3>
                 <p>
-                  <a href="https://udemy.com" class="text-dark" target="blank">Udemy</a>
+                  <a href="https://udemy.com" target="blank">Udemy</a>
                 </p>
                 <p>
-                  <a href="https://youtube.com" class="text-dark" target="blank">Youtube</a>
+                  <a href="https://youtube.com" target="blank">Youtube</a>
                 </p>
               </div>
 
@@ -62,19 +88,22 @@
 
               <div class="col-md">
                 <h3>Psykologia</h3>
-                <a href="psykologia/testaa-tietosi/monivalintatehtävät" class="text-dark"
-                  target="blank">Testaa psykologian tietosi</a>
+                <a href="psykologia/testaa-tietosi/monivalintatehtävät" target="blank">Testaa
+                  psykologian tietosi</a>
               </div>
             </div>
           </div>
 
         </div>
-        <span class="fixed-bottom text-light p-1 d-none d-sm-inline"><small>Taustakuvan lähde:
-            <a href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/" class="text-light"
-              target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a></small></span>
-        <span class="text-light p-1 d-sm-none d-xs-inline"><small>Taustakuvan lähde:
-            <a href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/" class="text-light"
-              target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a></small></span>
+        <footer class="text-center">
+          <div class="text-light p-1" id="taustakuvan-lähde-työpöytä"><small>Taustakuvan lähde:
+              <a href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/" class="text-light"
+                target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a></small></div>
+          <!-- <span class="text-light p-1"> <br>
+            <br><small>Taustakuvan lähde:
+              <a href="https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/" class="text-light"
+                target="blank">https://pixabay.com/fi/photos/kuppi-kahvia-kannettava-tietokone-1280537/</a></small></span> -->
+        </footer>
       </div>
     </div>
   </div>
