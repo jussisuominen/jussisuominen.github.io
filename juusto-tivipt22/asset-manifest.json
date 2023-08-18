@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/juusto/static/css/main.6563de64.css",
+    "main.js": "/juusto/static/js/main.504ffbd9.js",
+    "static/media/tausta.jpg": "/juusto/static/media/tausta.a28bc078e6659b6bd7ef.jpg",
+    "index.html": "/juusto/index.html",
+    "main.6563de64.css.map": "/juusto/static/css/main.6563de64.css.map",
+    "main.504ffbd9.js.map": "/juusto/static/js/main.504ffbd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6563de64.css",
+    "static/js/main.504ffbd9.js"
+  ]
+}
