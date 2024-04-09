@@ -1,0 +1,33 @@
+* {
+    font-family: Verdana;
+}
+
+/* html, body {
+    height: 100vh;
+} */
+
+body {
+    /* flex-direction: column; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+button {
+    background: lightskyblue;
+    color: black;
+    border-radius: 1rem;
+    padding: 0.3rem 0.5rem;
+    border-color: lightblue;
+    border-style: solid;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    /* text-align: center; */
+    margin: auto;
+    max-width: 60rem;
+}
