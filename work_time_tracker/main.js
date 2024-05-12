@@ -1,12 +1,43 @@
+const labels = {
+  title: 'Työskentelyajan seuranta',
+  workTimeData: 'Työskentelyajat',
+  workStarted: 'Aloitit työskentelyn',
+  startWorking: 'Aloita työskentely',
+  stopWorking: 'Lopeta työskentely',
+  totalWorkTimeToday: 'Työskentelyaika tänään',
+  youWorked: 'Työskentelit',
+  hours: 'tuntia',
+  youStoppedWorking: 'Lopetit työskentelyn',
+  and: 'ja',
+  seconds: 'sekuntia',
+  minutes: 'minuuttia'
+}
+
 let working = false
 let startDate
 let endDate
-// Total work time in milliseconds. This must be converted to hours, minutes and
+// Total work time today in milliseconds. This must be converted to hours, minutes and
 // seconds when displaying hours, minutes and seconds that the user has worked.
-let totalWorkTime = 0
+let totalWorkTimeToday = 0
 let totalWorkTimeData = {}
 
-console.log(getTodayString())
+// Do these things when user starts the app
+// Initialize labels
+titleLabel.textContent = labels.title
+workTimeDataLabel.textContent = labels.workTimeData
+startWorkingButton.innerHTML = `<h3>${labels.startWorking}</h3>`
+
+const workingTimeViewData = localStorage.getItem(`workingTimeView_${getTodayString()}`)
+
+const localStorageKeys = Object.keys(localStorage)
+
+console.log(localStorageKeys)
+
+if(workingTimeViewData) {
+  workingTimeView.innerHTML = localStorage.getItem(`workingTimeView_${getTodayString()}`)
+}
+
+// console.log(getTodayString())
 
 const storedTotalWorkTime = localStorage.getItem('total_work_time')
 
@@ -17,13 +48,22 @@ if(storedTotalWorkTime) {
 if(totalWorkTimeData) {
   console.log(totalWorkTimeData[getTodayString()])
   if(totalWorkTimeData[getTodayString()]) {
-    totalWorkTime = totalWorkTimeData[getTodayString()]
+    totalWorkTimeToday = totalWorkTimeData[getTodayString()]
   }
 
-  console.log(totalWorkTime)
+  console.log(totalWorkTimeToday)
 
   showTotalWorkTime()
 }
+
+// Event listeners
+startWorkingButton.addEventListener('click', () => {
+  if(!working) {
+    startWorking()
+  } else {
+    stopWorking()
+  }
+})
 
 function startWorking() {
   startDate = new Date()
@@ -32,9 +72,9 @@ function startWorking() {
   const hours = date.getHours()
   const minutes = date.getMinutes()
 
-  workingTimeView.innerHTML += `You started working: ${getWorkTimeHTML(hours, minutes)}`
+  workingTimeView.innerHTML += `${labels.workStarted}: ${getWorkTimeHTML(hours, minutes)}.`
 
-  startWorkingButton.innerHTML = '<h3>Stop working</h3>'
+  startWorkingButton.innerHTML = `<h3>${labels.stopWorking}</h3>`
 
   working = true
 }
@@ -52,14 +92,16 @@ function stopWorking() {
   const timeDifferenceInHours = Math.floor(timeDifference / 1000 / 60 / 60)  
 
   workingTimeView.innerHTML += `
-    You stopped working: ${getWorkTimeHTML(endDate.getHours(), endDate.getMinutes())}. You worked: <strong>${timeDifferenceInHours} hours, ${timeDifferenceInMinutes} minutes and ${timeDifferenceInSeconds} seconds.</strong><br><br>`
+    ${labels.youStoppedWorking}: ${getWorkTimeHTML(endDate.getHours(), endDate.getMinutes())}. ${labels.youWorked}: <strong>${timeDifferenceInHours} ${labels.hours}, ${timeDifferenceInMinutes} ${labels.minutes} ${labels.and} ${timeDifferenceInSeconds} ${labels.seconds}.</strong><br><br>`
 
-  startWorkingButton.innerHTML = '<h3>Start working</h3>'
+  localStorage.setItem(`workingTimeView_${getTodayString()}`, workingTimeView.innerHTML)
 
-  totalWorkTime += timeDifference
+  startWorkingButton.innerHTML = `<h3>${labels.startWorking}</h3>`
+
+  totalWorkTimeToday += timeDifference
 
   console.log(timeDifference)
-  console.log(totalWorkTime)
+  console.log(totalWorkTimeToday)
 
   showTotalWorkTime()
 
@@ -69,28 +111,23 @@ function stopWorking() {
 
   totalWorkTimeData = {}
 
-  const today = getTodayString()
+  saveTotalWorkTime()
+}
 
-  totalWorkTimeData[today] = totalWorkTime
+function saveTotalWorkTime() {
+  const today = getTodayString()
+  totalWorkTimeData[today] = totalWorkTimeToday
   localStorage.setItem('total_work_time', JSON.stringify(totalWorkTimeData))
 }
 
-startWorkingButton.addEventListener('click', () => {
-  if(!working) {
-    startWorking()
-  } else {
-    stopWorking()
-  }
-})
-
 function showTotalWorkTime() {
-  const totalWorkTimeInSeconds = Math.floor(totalWorkTime / 1000) % 60
-  const totalWorkTimeInMinutes = Math.floor(totalWorkTime / 1000 / 60) % 60
-  const totalWorkTimeInHours = Math.floor(totalWorkTime / 1000 / 60 / 60)
+  const totalWorkTimeInSeconds = Math.floor(totalWorkTimeToday / 1000) % 60
+  const totalWorkTimeInMinutes = Math.floor(totalWorkTimeToday / 1000 / 60) % 60
+  const totalWorkTimeInHours = Math.floor(totalWorkTimeToday / 1000 / 60 / 60)
 
   console.log(totalWorkTimeInSeconds)
 
-  totalWorkTimeView.innerHTML = `<hr>Total work time today: <strong>${totalWorkTimeInHours} h, ${totalWorkTimeInMinutes} m, ${totalWorkTimeInSeconds} s</strong>`
+  totalWorkTimeTodayView.innerHTML = `<hr>${labels.totalWorkTimeToday}: <strong>${totalWorkTimeInHours} ${labels.hours}, ${totalWorkTimeInMinutes} ${labels.minutes} ${labels.and} ${totalWorkTimeInSeconds} ${labels.seconds}</strong>`
 }
 
 function getTodayString() {
