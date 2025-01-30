@@ -1,0 +1,17 @@
+body {
+    background: url('tausta.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-backround-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkblue;
+}
+
+.card {
+    opacity: 0.9;
+}

@@ -7,98 +7,83 @@
   <title>Jussi Suominen</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="tyylit.css">
 </head>
-<style>
-  body {
-    background: url('tausta.jpg') no-repeat center center fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-backround-size: cover;
-  }
-
-  a {
-    color: #444;
-    text-decoration: none;
-  }
-
-  .card {
-    opacity: 0.9;
-  }
-</style>
-</style>
 
 <body class="bg-secondary">
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand text-light" href="index.html">Jussi Suomisen kotisivut</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="index.html">Etusivu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="tietoja_minusta.html">Tietoja minusta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="koodaus.html">Koodaus</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="linkit.html">Linkit</a>
-          </li>
-        </ul>
-      </div>
+      <!-- Title of the web site -->
+      <a class="navbar-brand text-light mx-4 fs-4" href="index.html">
+        Jussi Suomisen kotisivut
+      </a>
+
+      <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-4 fs-5">
+        <li class="nav-item mx-1">
+            <a class="nav-link active text-light" aria-current="page" href="index.html">
+                🏠 Etusivu
+            </a>
+        </li>
+
+        <li class="nav-item mx-1">
+            <a class="nav-link active text-light" aria-current="page" href="portfolio.html">
+                💼 &nbsp;Portfolio (ohjelmistokehitys) 
+            </a>
+        </li>
+        
+        <li class="nav-item mx-1">
+            <a class="nav-link text-light" href="tietoja_minusta.html">
+                ❔ &nbsp;Tietoja minusta
+            </a>
+        </li>
+        
+        <li class="nav-item mx-1">
+            <a class="nav-link text-light" href="koodaus.html">
+                🧑‍💻 Koodaus
+            </a>
+        </li>
+
+        <li class="nav-item mx-1">
+            <a class="nav-link text-light" href="linkit.html">
+                🔗 &nbsp;Linkit
+            </a>
+        </li>
+
+        <li class="nav-item mx-1">
+            <a class="nav-link text-light" href="musiikki.html">
+                🎵 &nbsp;Musiikki
+            </a>
+        </li>
+    </ul>
+</div>
     </div>
   </nav>
-  <main class="row px-4">
-    <div class="col-md-6 offset-md-3" style="margin-top: 1rem;">
+
+  <main class="row m-4 m-xl-none">
+    <div class="col-xl-6 offset-xl-3" style="margin-top: 10rem;">
       <div class="card">
         <div class="card-header bg-dark text-light">
-          <h2>Tietoja minusta</h2>
+          <h2>
+            Tietoja minusta
+          </h2>
         </div>
-        <div class="card-body">
-          <h2>Perustiedot</h2>
-          <hr>
-          <div>
-            <h4 class="p-2">
-              Nimi: <span class="badge text-bg-dark">Jussi Suominen</span>
-            </h4>
-            <hr>
-            <h4 class="p-2">
-              Ikä: <span class="badge text-bg-dark">39</span>
-            </h4>
-            <hr>
-            <h4 class="p-2">
-              Synnyin-/asuinpaikka:
-              <a href="https://pori.fi">
-                <span class="badge text-bg-dark">
-                  Pori
-                </span>
-              </a>
-            </h4>
-            <hr>
-            <h4 class="p-2">
-              <div class="mb-2">Koulutus:</div>
-              <a href="https://opintopolku.fi/konfo/fi/koulutus/1.2.246.562.13.00000000000000000176">
-                <span class="badge text-bg-dark">
-                  Tieto- ja viestintätekniikan perustutkinto (ohjelmistokehittäjä)
-                </span>
-                <span class="badge text-bg-dark">
-                  Otavan Opiston nettilukio
-                </span>
-              </a>
-            </h4>
-          </div>
+        <div class="card-body" style="background: #eee">
+          <p class="card-text fs-5">
+            Olen 39-vuotias ja asun/olen syntynyt Porissa. <strong>Harrastukseni:</strong> Ohjelmointi/koodaus, tietokoneet ja lähes kaikki tietokoneisiin liittyvä, Youtube-videoiden katselu, nettisurffailu, tietokone- ja konsolipelien pelaaminen, opiskelu ja kuntoilu.
+          </p>
         </div>
       </div>
     </div>
   </main>
   <footer class="fixed-bottom bg-dark text-light">
-    <div class="text-center my-2">&copy; Jussi Suominen 2024</div>
+    <div class="text-center my-2">&copy; Jussi Suominen 2025</div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
