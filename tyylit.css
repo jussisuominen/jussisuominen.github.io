@@ -1,5 +1,5 @@
 body {
-    background: url('tausta.jpg') no-repeat center center fixed;
+    background: url('tausta.jpg') no-repeat fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
