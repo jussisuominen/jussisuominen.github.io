@@ -1,0 +1,6 @@
+const pageTitleElement = document.getElementById('page-title')
+const pageHeaderElement = document.getElementById('page-header')
+const navbarSupportedContentElement = document.getElementById('navbarSupportedContent')
+const navbarTogglerButton = document.getElementById('navbar-toggler-button')
+const navbarNavElement = document.getElementById('navbar-nav')
+const mainElement = document.getElementById('main')

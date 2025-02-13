@@ -4,6 +4,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-backround-size: cover;
+    overflow: auto;
 }
 
 a {
@@ -12,6 +13,6 @@ a {
     color: darkblue;
 }
 
-.card {
+.header, .card {
     opacity: 0.9;
 }
