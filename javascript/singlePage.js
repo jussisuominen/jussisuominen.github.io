@@ -1,4 +1,4 @@
-const navItemStyle = 'nav-item mx-2 mb-2 mb-xs-4 bg-secondary rounded'
+const navItemStyle = 'nav-item mx-2 my-2 my-lg-0 bg-secondary rounded '
 
 const navItems = {}
 
@@ -9,7 +9,7 @@ pages.forEach(page => {
 
     navItem.classList = navItemStyle
 
-    navItem.innerHTML = `<a class="nav-link text-light" aria-current="page" href="#${contentFile}">
+    navItem.innerHTML = `<a class="nav-link text-light" href="#${contentFile}">
     ${page}</a>`
     navItem.onclick = async () => {
         // Check if user is using a mobile/small device.
@@ -23,8 +23,18 @@ pages.forEach(page => {
     }
 
     navbarNavElement.appendChild(navItem)
-    navItems
 })
+
+// Add link for the relaxation exercise. 
+// Lisää linkki rentoutusharjoitukseen.
+// Code needs to be refactored!!
+const relaxationNavItem = document.createElement('li')
+
+relaxationNavItem.classList = navItemStyle
+
+relaxationNavItem.innerHTML = `<a class="nav-link text-light" href="rentoutus/index.html" target="_blank">Rentoutusharjoitus</a>`
+
+navbarNavElement.appendChild(relaxationNavItem)
 
 // async function showAllPages() {
 //     await openPage('Tervetuloa kotisivuilleni!', 'etusivu')

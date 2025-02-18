@@ -18,6 +18,7 @@ function exerciseCompleted() {
     startButton.style.display = 'inline-block'
     startButton.textContent = doAgainMessage
     animatedShape.className = ''
+    timeLeft = 60
 }
 
 function changeAnimation() {
