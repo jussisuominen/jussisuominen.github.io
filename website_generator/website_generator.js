@@ -5,10 +5,14 @@ const fileSystem = require('fs')
 // for the layout change this.
 const layoutFile = './layout.html'
 const navigationFile = './navigation.html'
-// Markup that's used to define where content portion of the page
+// Markup that's used to define where the content portion of the page
 // is to be added.
 const contentMarkup = '{{ content }}'
+// Markup that's used to define where navigation portion of the page
+// is to be added.
 const navigationMarkup = '{{ navigation }}'
+// Markup that's used to define where the page title portion of the page
+// is to be added.
 const pageTitleMarkup = '{{ page_title }}'
 // Output path specifies where web site generator generates the
 // HTML files of the web page. Output path must end with "/".

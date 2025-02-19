@@ -5,6 +5,7 @@ body {
     -moz-background-size: cover;
     -o-backround-size: cover;
     overflow: auto;
+    padding-bottom: 5rem;
 }
 
 a {
