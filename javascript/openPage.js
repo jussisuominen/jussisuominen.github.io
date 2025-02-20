@@ -1,5 +1,5 @@
 async function openPage(pageTitle, contentFile) {
-    const response = await fetch(contentFile + '.html')
+    const response = await fetch('./content/' + contentFile + '.html')
 
     if(!response.ok) {
         alert(response.statusText)
