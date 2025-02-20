@@ -1,4 +1,4 @@
-function card(title, content) {
+function card(title, content, contentFile) {
     const cardContainer = document.createElement('div')
 
     cardContainer.className = 'card'
