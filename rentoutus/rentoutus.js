@@ -19,6 +19,8 @@ function exerciseCompleted() {
     startButton.textContent = doAgainMessage
     animatedShape.className = ''
     timeLeft = 60
+    counter = 4
+    animatedShape.removeEventListener('animationend')
 }
 
 function changeAnimation() {
